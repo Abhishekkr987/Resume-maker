@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accept page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class=" navbar navbar-dark bg-dark">
+        <a href="" class="navbar-brand">Abhishek Resume Maker</a>
+        <div class="navbar">
+                <a class="nav-item nav-link" href="{% url 'list' %}">Resumes List</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <form method="POST">
+                    {% csrf_token %}
+
+        <div class="row">
+
+            <div class="col-md-5 offset-md-2">
+                <h5><u>Personal Details</u></h5><br>
+            </div>
+
+
+            <div class="col-md-5 offset-md-2">
+            <label for="first_name">First name*</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First Name">
+            </div>
+            <div class="col-md-5">
+            <label for="last_name">Last name*</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter Last Name">
+            </div>
+
+            <div class="col-md-5 offset-md-2">
+            <label for="email">Email*</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email">
+            </div>
+            <div class="col-md-5">
+            <label for="phone">Phone*</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone">
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="address">Address*</label>
+            <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
+            </div>
+
+            <div class="col-md-5 offset-md-2">
+            <label for="pin_code">Pin Code*</label>
+            <input type="text" class="form-control" id="pin_code" name="pin_code" placeholder="Enter Pin Code">
+            </div>
+            <div class="col-md-5">
+            <label for="city">City/Town*</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="Enter City">
+            </div>
+
+            <div class="col-md-5 offset-md-2">
+            <label for="dob">Date of Birth</label>
+            <input type="text" class="form-control" id="dob" name="dob" placeholder="dd-mm-yyyy">
+            </div>
+            <div class="col-md-5">
+            <label for="gender">Gender*</label>
+                <select class="form-control" name="gender" id="gender" >
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <div class="col-md-5 offset-md-2">
+            <label for="nationality">Nationality*</label>
+            <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Enter Your Nationality">
+            </div>
+            <div class="col-md-5">
+            <label for="marital_status">Marital Status*</label>
+                <select class="form-control" name="marital_status" id="marital_status" >
+                    <option value="Unmarried">Unmarried</option>
+                    <option value="Married">Married</option>
+                </select>
+            </div>
+
+            <div class="col-md-5 offset-md-2">
+            <label for="linked_in">Linked_in</label>
+            <input type="text" class="form-control" id="linked_in" name="linked_in" placeholder="Enter Your Linked_in Profile">
+            </div>
+            <div class="col-md-5">
+            <label for="website">Website</label>
+            <input type="text" class="form-control" id="website" name="website" placeholder="Enter Your Website">
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="description">Description</label>
+            <textarea type="text" class="form-control" id="description" name="description" placeholder="Add a Summary to your Profile"></textarea>
+            <br>
+            </div>
+
+            <div class="col-md-5 offset-md-2">
+                <h5><u>Job profile</u></h5><br>
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="job_profile">Job Profile</label>
+            <input type="text" class="form-control" id="job_profile" name="job_profile" placeholder="eg-Software Developer">
+            </div>
+            <div class="col-md-10 offset-md-2">
+            <label for="job_profile_description">Description</label>
+            <textarea type="text" class="form-control" id="job_profile_description" name="job_profile_description" placeholder="Brief About your Job Profile"></textarea>
+            <br>
+            </div>
+
+
+
+            <div class="col-md-5 offset-md-2">
+                <h5><u>Work Experience</u></h5><br>
+            </div>
+
+            <div class="col-md-5 offset-md-2">
+            <label for="job_title">Job Title</label>
+            <input type="text" class="form-control" id="job_title" name="job_title" placeholder="Enter Your Job Title">
+            </div>
+            <div class="col-md-5">
+            <label for="job_city">Job City</label>
+            <input type="text" class="form-control" id="job_city" name="job_city" placeholder="Enter Your Job City">
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="job_company">Employer</label>
+            <input type="text" class="form-control" id="job_company" name="job_company" placeholder="Enter Your Job Company">
+            </div>
+
+
+            <div class="col-md-2 offset-md-2">
+            <label for="job_start_month">Start Date</label>
+                <select class="form-control" name="job_start_month" id="job_start_month" >
+                    <option disabled selected value="">Month</option>
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sep">Sep</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+            <label for="job_start_year"><br></label>
+            <input type="text" class="form-control" id="job_start_year" name="job_start_year" placeholder="Year">
+            </div>
+            <div class="col-md-2 offset-md-2">
+            <label for="job_end_month">End Date</label>
+                <select class="form-control" name="job_end_month" id="job_end_month">
+                    <option disabled selected value="">Month</option>
+                    <option value="Currently Working">Currently Working</option>
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sep">Sep</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+            <label for="job_end_year"><br></label>
+            <input type="text" class="form-control" id="job_end_year" name="job_end_year" placeholder="Year">
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="job_description">Job Description</label>
+            <textarea type="text" class="form-control" id="job_description" name="job_description" placeholder="Add a JD to your Profile"></textarea>
+            <br>
+            </div>
+
+            <div class="col-md-5 offset-md-2">
+                <h6 style="color:Tomato;">**<u>If more than 1 company</u></h6>
+            </div>
+
+            <div class="col-md-5 offset-md-2">
+            <label for="job_title2">Job Title</label>
+            <input type="text" class="form-control" id="job_title2" name="job_title2" placeholder="Enter Your Job Title">
+            </div>
+            <div class="col-md-5">
+            <label for="job_city2">Job City</label>
+            <input type="text" class="form-control" id="job_city2" name="job_city2" placeholder="Enter Your Job City">
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="job_company2">Employer</label>
+            <input type="text" class="form-control" id="job_company2" name="job_company2" placeholder="Enter Your Job Company">
+            </div>
+
+
+            <div class="col-md-2 offset-md-2">
+            <label for="job_start_month2">Start Date</label>
+                <select class="form-control" name="job_start_month2" id="job_start_month2" >
+                    <option disabled selected value="">Month</option>
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sep">Sep</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+            <label for="job_start_year2"><br></label>
+            <input type="text" class="form-control" id="job_start_year2" name="job_start_year2" placeholder="Year">
+            </div>
+            <div class="col-md-2 offset-md-2">
+            <label for="job_end_month2">End Date</label>
+                <select class="form-control" name="job_end_month2" id="job_end_month2">
+                    <option disabled selected value="">Month</option>
+                    <option value="Currently Working">Currently Working</option>
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sep">Sep</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+            <label for="job_end_year2"><br></label>
+            <input type="text" class="form-control" id="job_end_year2" name="job_end_year2" placeholder="Year">
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="job_description2">Job Description</label>
+            <textarea type="text" class="form-control" id="job_description2" name="job_description2" placeholder="Add a JD to your Profile"></textarea>
+            <br>
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+                <h5><u>Education and Qualifications</u></h5><br>
+            </div>
+
+            <div class="col-md-5 offset-md-2">
+            <label for="edu_degree">Degree</label>
+            <input type="text" class="form-control" id="edu_degree" name="edu_degree" placeholder="Enter Your Degree">
+            </div>
+            <div class="col-md-5">
+            <label for="edu_city">City/Town</label>
+            <input type="text" class="form-control" id="edu_city" name="edu_city" placeholder="College City">
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="edu_degree_college_name">Institute</label>
+            <input type="text" class="form-control" id="edu_degree_college_name" name="edu_degree_college_name" placeholder="Enter Your College Name">
+            </div>
+
+            <div class="col-md-2 offset-md-2">
+            <label for="edu_degree_end_month">End Date</label>
+                <select class="form-control" name="edu_degree_end_month" id="edu_degree_end_month" >
+                    <option disabled selected value="">Month</option>
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sep">Sep</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+            <label for="edu_degree_end_year"><br></label>
+            <input type="text" class="form-control" id="edu_degree_end_year" name="edu_degree_end_year" placeholder="Year">
+            </div>
+
+            <div class="col-md-4 offset-md-2">
+            <label for="edu_university">University</label>
+            <input type="text" class="form-control" id="edu_university" name="edu_university" placeholder="eg-MAKAUT">
+            </div>
+
+            <div class="col-md-5 offset-md-2">
+            <label for="edu_school">School(12<sup>th</sup>)</label>
+            <input type="text" class="form-control" id="edu_school" name="edu_school" placeholder="Add your School">
+            </div>
+            <div class="col-md-3">
+            <label for="edu_school_city">School City</label>
+            <input type="text" class="form-control" id="edu_school_city" name="edu_school_city" placeholder="City">
+            </div>
+            <div class="col-md-2">
+            <label for="edu_school_board">Board</label>
+            <input type="text" class="form-control" id="edu_school_board" name="edu_school_board" placeholder="eg-CBSE">
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="edu_degree_description">Education Description</label>
+            <textarea type="text" class="form-control" id="edu_degree_description" name="edu_degree_description" placeholder="eg-College Projects"></textarea>
+            <br>
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+                <h5><u>Projects</u></h5><br>
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="project1">Project 1</label>
+            <input type="text" class="form-control" id="project1" name="project1" placeholder="Project Title">
+            </div>
+            <div class="col-md-10 offset-md-2">
+            <label for="project1_description">Project Description</label>
+            <textarea type="text" class="form-control" id="project1_description" name="project1_description" placeholder="Brief description about the Project"></textarea>
+            <br>
+            </div>
+
+            <div class="col-md-5 offset-md-2">
+                <h6 style="color:Tomato;">**<u>If more than 1 projects</u></h6>
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="project2">Project 2</label>
+            <input type="text" class="form-control" id="project2" name="project2" placeholder="Project Title">
+            </div>
+            <div class="col-md-10 offset-md-2">
+            <label for="project2_description">Project Description</label>
+            <textarea type="text" class="form-control" id="project2_description" name="project2_description" placeholder="Brief description about the Project"></textarea>
+            <br>
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+                <h5><u>Skills</u></h5>
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="skills"></label>
+            <textarea type="text" class="form-control" id="skills" name="skills" placeholder="eg- Python, Django, MYSQL"></textarea>
+            <br>
+            </div>
+
+
+            <div class="col-md-10 offset-md-2">
+                <h5><u>Interests</u></h5>
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+            <label for="hobby"></label>
+            <textarea type="text" class="form-control" id="hobby" name="hobby" placeholder="eg-Singing, Dancing, etc."></textarea>
+            <br>
+            </div>
+
+            <div class="col-md-10 offset-md-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+        </div>
+
+    </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <link rel="stylesheet" href="{% static 'pdf/design1.css' %}">
+</head>
+<body>
+
+
+<div class="container">
+  <div class="header">
+    <div class="full-name">
+      <span class="first-name">{{ user_profile.first_name }}</span>
+      <span class="last-name">{{ user_profile.last_name }}</span>
+    </div>
+    <div class="contact-info">
+      <span class="email">Email: </span>
+      <span class="email-val">{{ user_profile.email }}</span>
+      <span class="separator"></span>
+      <span class="phone">Phone: </span>
+      <span class="phone-val">{{ user_profile.phone }}</span>
+      <span class="separator"></span>
+      <span class="phone">DOB: </span>
+      <span class="phone-val">{{ user_profile.dob }}</span>
+    </div>
+
+    <div class="about">
+      <span class="position">{{ user_profile.job_profile }}, </span>
+      <span class="desc">
+        {{ user_profile.job_profile_description }}
+      </span>
+    </div>
+  </div>
+   <div class="details">
+    <div class="section">
+      <div class="section__title">Experience</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name">{{ user_profile.job_company }}</div>
+            <div class="addr">{{ user_profile.job_city }}</div>
+            <div class="duration">{{ user_profile.job_start_month }} {{ user_profile.job_start_year }} - {{ user_profile.job_end_month }} {{ user_profile.job_end_year }}</div>
+          </div>
+          <div class="right">
+            <div class="name">{{ user_profile.job_title }}</div>
+            <div class="desc">{{ user_profile.job_description }}</div>
+          </div>
+        </div>
+                <div class="section__list-item">
+          <div class="left">
+            <div class="name">{{ user_profile.job_company2 }}</div>
+            <div class="addr">{{ user_profile.job_city2 }}</div>
+            <div class="duration"> {{user_profile.job_start_month2}}   {{user_profile.job_start_year2}}     {{user_profile.job_end_month2}}   {{user_profile.job_end_year2}} </div>
+          </div>
+          <div class="right">
+            <div class="name"> {{user_profile.job_title2}} </div>
+            <div class="desc"> {{user_profile.job_description2}} </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="section">
+      <div class="section__title">Education</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name">DEGREE</div>
+            <div class="addr">{{ user_profile.edu_degree }}</div>
+            <div class="addr">{{ user_profile.edu_degree_college_name }}, {{ user_profile.edu_city }}</div>
+            <div class="duration">Degree Completed - {{ user_profile.edu_degree_end_month}} {{ user_profile.edu_degree_end_year }}</div>
+          </div>
+          <div class="right">
+            <div class="name">UNIVERSITY</div>
+            <div class="desc">{{ user_profile.edu_university }}</div>
+          </div>
+        </div>
+        <div class="section__list-item">
+          <div class="left">
+              <div class="name">SCHOOL - 12<sup>th</sup></div>
+            <div class="addr">{{ user_profile.edu_school }}</div>
+            <div class="duration">{{ user_profile.edu_school_city }}</div>
+          </div>
+          <div class="right">
+            <div class="name">BOARD</div>
+            <div class="desc">{{ user_profile.edu_school_board }}</div>
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+     <div class="section">
+      <div class="section__title">Projects</div>
+       <div class="section__list">
+         <div class="section__list-item">
+           <div class="name">{{ user_profile.project1 }}</div>
+           <div class="text">{{ user_profile.project1_description }}</div>
+         </div>
+
+         <div class="section__list-item">
+                    <div class="name">{{ user_profile.project2 }}</div>
+           <div class="text">{{ user_profile.project2_description }}<a href="/login"></a>
+           </div>
+         </div>
+       </div>
+    </div>
+     <div class="section">
+       <div class="section__title">Skills</div>
+       <div class="skills">
+         <div class="skills__item">
+           <div class="left"><div class="name">
+             {{ user_profile.skills }}
+             </div></div>
+           <!--div class="right">
+                          <input  id="ck1" type="checkbox" checked/>
+
+             <label for="ck1"></label>
+                          <input id="ck2" type="checkbox" checked/>
+
+              <label for="ck2"></label>
+                         <input id="ck3" type="checkbox" />
+
+              <label for="ck3"></label>
+                           <input id="ck4" type="checkbox" />
+            <label for="ck4"></label>
+                          <input id="ck5" type="checkbox" />
+              <label for="ck5"></label>
+
+           </div-->
+         </div>
+
+       </div>
+       <!--div class="skills__item">
+           <div class="left"><div class="name">
+             CSS</div></div>
+           <div class="right">
+                          <input  id="ck1" type="checkbox" checked/>
+
+             <label for="ck1"></label>
+                          <input id="ck2" type="checkbox" checked/>
+
+              <label for="ck2"></label>
+                         <input id="ck3" type="checkbox" />
+
+              <label for="ck3"></label>
+                           <input id="ck4" type="checkbox" />
+            <label for="ck4"></label>
+                          <input id="ck5" type="checkbox" />
+              <label for="ck5"></label>
+
+           </div>
+         </div-->
+
+       </div>
+     <div class="section">
+     <div class="section__title">
+       Interests
+       </div>
+       <div class="section__list">
+         <div class="section__list-item">
+                  {{ user_profile.hobby }}
+          </div>
+       </div>
+     </div>
+     </div>
+  </div>
+</div>
+
+</body>
+</html>

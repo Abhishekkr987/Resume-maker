@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+</head>
+<body>
+    <h1 align="left">{{ user_profile.first_name }} {{ user_profile.last_name }}</h1>
+    <h4 align="left">Email : {{ user_profile.email }}   |   Phone : {{ user_profile.phone }}   |   DOB : {{ user_profile.dob }}</h4>
+    <h4 align="left"><u>{{ user_profile.job_profile }}</u></h4>
+    <p>{{ user_profile.job_profile_description }}</p>
+    <br>
+
+
+    <h3 align="left">EXPERICENCE</h3>
+    <hr/>
+    <h4 align="left"><u>{{ user_profile.job_company }}</u></h4>
+    <p align="left">{{ user_profile.job_city }}</p>
+    <p align="left">{{ user_profile.job_start_month }} {{ user_profile.job_start_year }} - {{ user_profile.job_end_month }} {{ user_profile.job_end_year }}</p>
+    <h4 align="left"><u>{{ user_profile.job_title }}</u></h4>
+    <p align="left">{{ user_profile.job_description }}</p>
+
+    <h4 align="left">{{ user_profile.job_company2 }}</h4>
+    <p align="left">{{ user_profile.job_city2 }}</p>
+    <p align="left">{{user_profile.job_start_month2}}   {{user_profile.job_start_year2}}     {{user_profile.job_end_month2}}   {{user_profile.job_end_year2}}</p>
+    <h4 align="left"><u>{{user_profile.job_title2}}</u></h4>
+    <p align="left">{{user_profile.job_description2}}</p>
+    <br>
+
+
+    <h3 align="left">EDUCATION</h3>
+    <hr/>
+    <h3 align="left"><u>Degree</u></h3>
+    <p align="left">{{ user_profile.edu_degree }}</p>
+    <p align="left">{{ user_profile.edu_degree_college_name }}, {{ user_profile.edu_city }}</p>
+    <p align="left">Degree Completed - {{ user_profile.edu_degree_end_month}} {{ user_profile.edu_degree_end_year }}</p>
+    <h3 align="left"><u>University</u> </h3>
+    <p align="left">{{ user_profile.edu_university }}</p>
+    <br>
+
+    <h3 align="left"><u>School - 12<sup>th</sup></u></h3>
+    <p align="left">{{ user_profile.edu_school }}</p>
+    <p align="left">{{ user_profile.edu_school_city }}</p>
+    <h3 align="left"><u>Board</u></h3>
+    <p align="left">{{ user_profile.edu_school_board }}</p>
+    <br>
+
+
+    <h3 align="left">PROJECTS</h3>
+    <hr/>
+    <h4 align="left"><u>{{ user_profile.project1 }}</u></h4>
+    <p align="left">{{ user_profile.project1_description }}</p>
+
+    <h4 align="left"><u>{{ user_profile.project2 }}</u></h4>
+    <p align="left">{{ user_profile.project2_description }}</p>
+    <br>
+
+
+    <h3 align="left">SKILLS</h3>
+    <hr/>
+    <p align="left"><b>{{ user_profile.skills }}</b></p>
+    <br>
+
+
+    <h3 align="left">INTERESTS</h3>
+    <hr/>
+    <p align="left">{{ user_profile.hobby }}</p>
+
+
+
+</body>
+</html>

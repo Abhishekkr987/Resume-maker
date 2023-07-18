@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accept page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class=" navbar navbar-dark bg-dark">
+        <a href="" class="navbar-brand">Abhishek Resume Maker</a>
+        <div class="navbar">
+                <a class="nav-item nav-link" href="{% url 'list' %}">Resumes List</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <form method="POST">
+                    {% csrf_token %}
+
+
+                    <div class="form-group">
+            <label for="first_name">First name*</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First Name">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last name*</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter Last Name">
+        </div>
+        <div class="form-group">
+            <label for="image">Photo*</label>
+            <input type="file" name="image" accept="image/*" id="image">
+        </div>
+        <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone*</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone">
+        </div>
+        <div class="form-group">
+            <label for="address">Address*</label>
+            <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
+        </div>
+        <div class="form-group">
+            <label for="pin_code">Pin Code*</label>
+            <input type="text" class="form-control" id="pin_code" name="pin_code" placeholder="Enter Pin Code">
+        </div>
+        <div class="form-group">
+            <label for="city">City*</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="Enter City">
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth*</label>
+            <input type="text" class="form-control" id="dob" name="dob" placeholder="dd-mm-yyyy">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender*</label>
+            <input type="text" class="form-control" id="gender" name="gender" placeholder="Enter Your Gender">
+        </div>
+        <div class="form-group">
+            <label for="nationality">Nationality*</label>
+            <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Enter Your Nationality">
+        </div>
+        <div class="form-group">
+            <label for="marital_status">Marital Status*</label>
+            <input type="text" class="form-control" id="marital_status" name="marital_status" placeholder="Enter Your Marital status">
+        </div>
+        <div class="form-group">
+            <label for="linked_in">Linked_in</label>
+            <input type="text" class="form-control" id="linked_in" name="linked_in" placeholder="Enter Your Linked_in Profile">
+        </div>
+        <div class="form-group">
+            <label for="website">Website</label>
+            <input type="text" class="form-control" id="website" name="website" placeholder="Enter Your Website">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea type="text" class="form-control" id="description" name="description" placeholder="Add a Summary to your Profile"></textarea>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label for="job_title">Job Title*</label>
+            <input type="text" class="form-control" id="job_title" name="job_title" placeholder="Enter Your Job Title">
+        </div>
+        <div class="form-group">
+            <label for="job_city">Job City*</label>
+            <input type="text" class="form-control" id="job_city" name="job_city" placeholder="Enter Your Job City">
+        </div>
+        <div class="form-group">
+            <label for="job_company">Job Company*</label>
+            <input type="text" class="form-control" id="job_company" name="job_company" placeholder="Enter Your Job Company">
+        </div>
+        <div class="form-group">
+            <label for="job_start_month">Job Starting Month*</label>
+            <input type="text" class="form-control" id="job_start_month" name="job_start_month" placeholder="Enter Your Job Starting Month">
+        </div>
+        <div class="form-group">
+            <label for="job_start_year">Job Starting Year*</label>
+            <input type="text" class="form-control" id="job_start_year" name="job_start_year" placeholder="Enter Your Job Startin Year">
+        </div>
+        <div class="form-group">
+            <label for="job_end_month">Job Ending Month</label>
+            <input type="text" class="form-control" id="job_end_month" name="job_end_month" value="Currently Working" placeholder="Enter Your Job Ending Month"  >
+        </div>
+        <div class="form-group">
+            <label for="job_end_year">Job Ending Year</label>
+            <input type="text" class="form-control" id="job_end_year" name="job_end_year" placeholder="Enter Your Job Ending Year">
+        </div>
+        <div class="form-group">
+            <label for="job_description">Job Description*</label>
+            <textarea type="text" class="form-control" id="job_description" name="job_description" placeholder="Add a JD to your Profile"></textarea>
+        </div>
+
+
+
+
+
+
+
+        <div class="form-group">
+            <label for="edu_degree">Degree Name</label>
+            <input type="text" class="form-control" id="edu_degree" name="edu_degree" placeholder="Enter Your Degree">
+        </div>
+        <div class="form-group">
+            <label for="edu_city">City</label>
+            <input type="text" class="form-control" id="edu_city" name="edu_city" placeholder="Add Your College City">
+        </div>
+        <div class="form-group">
+            <label for="edu_university">University</label>
+            <input type="text" class="form-control" id="edu_university" name="edu_university" placeholder="Add your university">
+        </div>
+        <div class="form-group">
+            <label for="edu_school">School</label>
+            <input type="text" class="form-control" id="edu_school" name="edu_school" placeholder="Add your School">
+        </div>
+        <div class="form-group">
+            <label for="edu_degree_end_month">Degree End Month</label>
+            <input type="text" class="form-control" id="edu_degree_end_month" name="edu_degree_end_month" placeholder="Degree End Month">
+        </div>
+        <div class="form-group">
+            <label for="edu_degree_end_year">Degree End Year</label>
+            <input type="text" class="form-control" id="edu_degree_end_year" name="edu_degree_end_year" placeholder="Degree End Year">
+        </div>
+        <div class="form-group">
+            <label for="edu_degree_description">Add Education Description</label>
+            <textarea type="text" class="form-control" id="edu_degree_description" name="edu_degree_description" placeholder="School"></textarea>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label for="skills">Skills</label>
+            <textarea type="text" class="form-control" id="skills" name="skills" placeholder="Add Your Skills"></textarea>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label for="hobby">Interests</label>
+            <textarea type="text" class="form-control" id="hobby" name="hobby" placeholder="Add Your Interests"></textarea>
+        </div>
+
+                     <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
